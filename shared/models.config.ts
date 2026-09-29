@@ -143,7 +143,7 @@ export const MODELS: ModelConfig[] = [
     label: 'MiniMax H3 Max',
     tier: 'premium',
     notes:
-      'Newest flagship (Aug 2026). Aspect ratio follows the source image. 1080P is refined from a native 768P render. No audio. Prompt rewriting is off by default so your wording is what runs.',
+      'Newest flagship (Aug 2026). Best result so far: followed the prompt beats and built the subject from the artwork itself (2026-09-29). Aspect ratio follows the source image; 1080P is refined from 768P. Always generates sound (no switch). Prompt rewriting is off by default so your wording is what runs.',
     maxPromptLength: 50000,
     imageParam: 'image_url',
     durations: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
