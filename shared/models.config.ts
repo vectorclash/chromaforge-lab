@@ -139,6 +139,59 @@ export const MODELS: ModelConfig[] = [
     }
   },
   {
+    id: 'minimax/h3-max/image-to-video',
+    label: 'MiniMax H3 Max',
+    tier: 'premium',
+    notes:
+      'Newest flagship (Aug 2026). Aspect ratio follows the source image. 1080P is refined from a native 768P render. No audio. Prompt rewriting is off by default so your wording is what runs.',
+    maxPromptLength: 50000,
+    imageParam: 'image_url',
+    durations: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    defaultDuration: 5,
+    toApiDuration: (s) => s,
+    resolutions: ['480P', '768P', '1080P'],
+    defaultResolution: '1080P',
+    params: [
+      {
+        kind: 'enum',
+        key: 'prompt_expansion_mode',
+        label: 'Prompt rewriting',
+        options: ['disabled', 'balanced', 'quality'],
+        default: 'disabled'
+      }
+    ],
+    pricing: {
+      source: 'https://fal.ai/models/minimax/h3-max/image-to-video',
+      checkedAt: '2026-09-29',
+      apiUnit: 'seconds',
+      apiUnitPriceAtCheck: 0.025,
+      // 50%-off launch rates "for a limited time", stated to end after September 30. When they
+      // do, the pricing API should move and the lab will flag the estimate as stale.
+      perSecond: ({ resolution }) => ({ '480P': 0.025, '768P': 0.04, '1080P': 0.08 })[String(resolution)] ?? 0.08
+    }
+  },
+  {
+    id: 'fal-ai/kling-video/o3/pro/image-to-video',
+    label: 'Kling O3 Pro',
+    tier: 'premium',
+    notes: 'Kling\'s newer line. Aspect ratio follows the source image. No negative prompt on this one.',
+    maxPromptLength: 2500,
+    imageParam: 'image_url',
+    durations: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    defaultDuration: 5,
+    toApiDuration: (s) => String(s),
+    resolutions: null,
+    defaultResolution: null,
+    params: [audioOff],
+    pricing: {
+      source: 'https://fal.ai/models/fal-ai/kling-video/o3/pro/image-to-video',
+      checkedAt: '2026-09-29',
+      apiUnit: 'seconds',
+      apiUnitPriceAtCheck: 0.14,
+      perSecond: ({ generate_audio }) => (generate_audio ? 0.14 : 0.112)
+    }
+  },
+  {
     id: 'fal-ai/veo3.1/fast/image-to-video',
     label: 'Veo 3.1 Fast',
     tier: 'premium',
