@@ -2,7 +2,7 @@
 
 A local tool for animating generative artwork from [Chromaforge](https://chromaforge.app) with fal.ai image-to-video models. It was built in an afternoon to answer one question: can current video models animate abstract generative art without losing it?
 
-[CLIP: the "Living artwork" run from MiniMax H3 Max]
+https://github.com/user-attachments/assets/db642c8c-797b-41ef-8de7-bcee736491fa
 
 ## The short version
 
@@ -10,8 +10,6 @@ I tested six image-to-video models on fal against real Chromaforge artwork. On a
 
 - Describe a *new scene* and most models drop the artwork within a second or two and render a generic stock version.
 - Describe *what's already there* and they keep it.
-
-[SIDE-BY-SIDE: same source image, "new scene" prompt vs "work with what's there" prompt]
 
 MiniMax H3 Max was the clear standout. Asked for a glass whale, it built one out of the source's own planes and palette. My honest verdict: none of the models beat Chromaforge's own JavaScript animation for this style yet, but "work with what's there" prompting on MiniMax is a promising direction.
 
