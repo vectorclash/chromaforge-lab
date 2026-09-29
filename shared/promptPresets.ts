@@ -1,24 +1,39 @@
 // Starting points for motion prompts. Edit freely -- nothing stored depends on these.
+// Starting points for motion prompts, written for fast, crystalline, colour-shifting flight
+// through a starfield. Each names a camera move, what the artwork itself does, and the
+// speed, and asks the model to keep the source's hard-edged translucent facets -- video
+// models drift toward generic soft CGI unless told what to preserve.
+// Edit freely -- nothing stored depends on these.
 export const MOTION_PRESETS: { name: string; prompt: string }[] = [
   {
-    name: 'Slow push-in',
-    prompt: 'Slow drifting camera push-in; the stars twinkle and the geometric shards rotate gently, colors shimmer.'
+    name: 'Crystal warp',
+    prompt:
+      'The camera rockets forward at high speed through a dense starfield; stars streak past into bright lines. The translucent geometric shards grow into a crystalline fractal structure that keeps subdividing into smaller facets as we fly through it. Colors shift continuously across the full spectrum, neon pink to lime to electric blue. Keep the hard-edged, glassy, translucent facets of the original artwork.'
   },
   {
-    name: 'Parallax drift',
-    prompt: 'Gentle lateral camera drift with parallax: the translucent shards separate into layers at different depths, the starfield glides behind them.'
+    name: 'Fractal bloom',
+    prompt:
+      'Fast forward camera surge. From the bright center, crystal facets bloom outward in a recursive fractal pattern, each shard splitting into smaller self-similar shards that rush past the camera. Stars twinkle and streak in the background. Hues cycle rapidly through vivid neon colors. Sharp, faceted, prismatic crystal, not smoke or liquid.'
   },
   {
-    name: 'Kaleidoscope turn',
-    prompt: 'The whole composition rotates slowly around its center like a kaleidoscope, facets catching light, colors cycling smoothly.'
+    name: 'Prism tunnel',
+    prompt:
+      'The shards assemble into a long crystalline tunnel of refracting glass facets, and the camera races through it at high speed. Light splits into rainbow spectra on every facet edge, and colors ripple along the tunnel walls in waves. Stars flash past between the crystals. Continuous, fast, hypnotic motion with hard geometric edges.'
   },
   {
-    name: 'Still camera, living light',
-    prompt: 'Locked-off static camera. Nothing moves except light: stars pulse and flare, gradients breathe and shift hue slowly.'
+    name: 'Hyperspace refraction',
+    prompt:
+      'Jump to hyperspace: the starfield stretches into long radiating light streaks rushing toward the camera. The crystal geometry refracts the streaks into prismatic spectral colors, facets rotating and catching light as they fly by. Colors cycle from magenta to cyan to acid green. Fast, energetic, glassy and sharp.'
   },
   {
-    name: 'Warp forward',
-    prompt: 'Accelerating flight forward through the artwork, shards streaming past the camera, stars stretching into streaks.'
+    name: 'Kaleidoscope dive',
+    prompt:
+      'An endless dive into a symmetrical crystalline kaleidoscope: mirrored fractal facets rotate and zoom inward continuously, new layers of crystal emerging from the center. Stars sparkle through the translucent glass. Rapid, smooth hue shifting across the whole image. Hard-edged geometric crystal, vivid neon palette.'
+  },
+  {
+    name: 'Shatter and reform',
+    prompt:
+      'The crystal composition shatters into thousands of glittering shards that fly past the camera at speed through a starfield, then reassemble ahead of us into a new crystalline fractal form. Colors shift with every fracture. Sharp translucent facets, bright refracted light, fast dynamic motion.'
   }
 ];
 
@@ -28,5 +43,9 @@ export const AUDIO_PRESETS: { name: string; prompt: string }[] = [
     prompt: 'an ethereal, retro synth soundscape -- warm analog pads, slow shimmering arpeggios, soft tape-saturated ambience, no vocals, no percussion.'
   },
   { name: 'Deep space drone', prompt: 'a deep, slowly evolving ambient drone with distant chimes, no vocals, no percussion.' },
-  { name: 'Glassy chimes', prompt: 'delicate glassy chimes and soft crystalline bells over airy reverb, no vocals.' }
+  { name: 'Glassy chimes', prompt: 'delicate glassy chimes and soft crystalline bells over airy reverb, no vocals.' },
+  {
+    name: 'Hyperdrive synth',
+    prompt: 'a driving retro synthwave pulse with a rising whoosh of speed, shimmering glassy arpeggios and deep analog bass, no vocals.'
+  }
 ];
