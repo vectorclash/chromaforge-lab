@@ -43,6 +43,8 @@ export async function startJob(req: AnimateRequest, onUpdate?: (job: Job) => voi
   if (!model) throw new RejectedRun(`Unknown model: ${req.modelId}`);
   if (!req.imageUrl) throw new RejectedRun('No image uploaded.');
   if (!req.prompt.trim()) throw new RejectedRun('A motion prompt is required.');
+  if (req.prompt.length > model.maxPromptLength)
+    throw new RejectedRun(`${model.label} accepts prompts up to ${model.maxPromptLength} characters; this one is ${req.prompt.length}.`);
   if (!model.durations.includes(req.duration))
     throw new RejectedRun(`${model.label} takes ${model.durations.join('/')}s, not ${req.duration}s.`);
   if (model.resolutions && !model.resolutions.includes(req.resolution ?? ''))

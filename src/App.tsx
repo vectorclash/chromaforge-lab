@@ -133,8 +133,10 @@ export default function App() {
     ? 'Choose a source image.'
     : !motion.trim()
       ? 'Write a motion prompt.'
-      : invalid
-        ? invalid
+      : prompt.length > model.maxPromptLength
+        ? `${model.label} accepts prompts up to ${model.maxPromptLength} characters; this one is ${prompt.length}. Shorten the motion or sound text.`
+        : invalid
+          ? invalid
         : !estimate
           ? (estimateError ?? 'Pricing…')
           : overCap
@@ -251,7 +253,10 @@ export default function App() {
                 </button>
               ))}
             </div>
-            <textarea value={motion} onChange={(e) => setMotion(e.target.value)} rows={4} placeholder="Describe the motion…" />
+            <textarea value={motion} onChange={(e) => setMotion(e.target.value)} rows={6} placeholder="Describe the motion…" />
+            <p className={`small ${prompt.length > model.maxPromptLength ? 'error' : 'muted'}`}>
+              {prompt.length.toLocaleString()} / {model.maxPromptLength.toLocaleString()} characters{audioOn ? ' incl. sound' : ''}
+            </p>
             {audioOn && (
               <>
                 <h3>Sound</h3>

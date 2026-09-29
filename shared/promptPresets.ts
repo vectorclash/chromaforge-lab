@@ -1,8 +1,8 @@
-// Starting points for motion prompts. Edit freely -- nothing stored depends on these.
-// Starting points for motion prompts, written for fast, crystalline, colour-shifting flight
-// through a starfield. Each names a camera move, what the artwork itself does, and the
-// speed, and asks the model to keep the source's hard-edged translucent facets -- video
-// models drift toward generic soft CGI unless told what to preserve.
+// Starting points for motion prompts. Living artwork is the conservative one; the rest are
+// deliberately wild scenes, each told as beats relative to the clip (so they fit 5s or 8s)
+// and each ending with the same style lock, because every model tested drifted toward a
+// generic stock look the moment it was not told what to keep.
+// Kling caps prompts at 2500 characters; these stay under 1800 to leave room for a Sound line.
 // Edit freely -- nothing stored depends on these.
 export const MOTION_PRESETS: { name: string; prompt: string }[] = [
   {
@@ -14,34 +14,39 @@ export const MOTION_PRESETS: { name: string; prompt: string }[] = [
       'Keep this exact image: the same layered translucent geometric planes, the same hot pink, lime green, electric blue and white, the same small dark four-pointed star glints. The planes drift slowly and slide over one another like sheets of colored glass, and where they overlap the blended colors shift and shimmer. The bright white core pulses softly. The star glints twinkle. The camera pushes in slowly and steadily. Flat graphic 2D artwork with hard edges, not a 3D render, not photographic, and no new objects appear.'
   },
   {
-    name: 'Crystal warp',
+    name: "Glass leviathan",
     prompt:
-      'The camera rockets forward at high speed through a dense starfield; stars streak past into bright lines. The translucent geometric shards grow into a crystalline fractal structure that keeps subdividing into smaller facets as we fly through it. Colors shift continuously across the full spectrum, neon pink to lime to electric blue. Keep the hard-edged, glassy, translucent facets of the original artwork.'
+      "The translucent planes peel off the canvas and snap together, triangle by triangle, into a colossal whale built of neon stained glass: hot pink ribs, lime green fins, an electric blue belly, white light glowing through it from inside. It swims slowly out of the frame's depth toward the camera through a field of tiny dark stars, its body flexing, every triangular pane catching light and shifting hue as it turns. As it glides past the lens its tail sweeps across the whole frame, and the panes of the tail break away into a spiral of spinning glass triangles that scatter and tumble across the screen. Keep the look of the source artwork throughout: flat, hard-edged, translucent overlapping glass planes in hot pink, lime green, electric blue and white, with small dark four-pointed star glints. Bold graphic style, crisp edges, no lens flares, no blur, no text."
   },
   {
-    name: 'Fractal bloom',
+    name: "Stained-glass cathedral",
     prompt:
-      'Fast forward camera surge. From the bright center, crystal facets bloom outward in a recursive fractal pattern, each shard splitting into smaller self-similar shards that rush past the camera. Stars twinkle and streak in the background. Hues cycle rapidly through vivid neon colors. Sharp, faceted, prismatic crystal, not smoke or liquid.'
+      "The camera pulls back fast and reveals that the artwork is one enormous stained-glass window set into an impossible cathedral floating in deep space. The cathedral's arches, columns and vaulted ceiling are built from the same translucent colored triangles. Light pours through the window and throws sharp pink, lime and blue triangles across a black mirror floor. The window's panes begin to rotate open like shutters, one after another, and the camera rushes forward through the opening into a second window beyond it, and a third, each one a new geometric arrangement of the same colors. Keep the look of the source artwork throughout: flat, hard-edged, translucent overlapping glass planes in hot pink, lime green, electric blue and white, with small dark four-pointed star glints. Bold graphic style, crisp edges, no lens flares, no blur, no text."
   },
   {
-    name: 'Prism tunnel',
+    name: "Infinite dive",
     prompt:
-      'The shards assemble into a long crystalline tunnel of refracting glass facets, and the camera races through it at high speed. Light splits into rainbow spectra on every facet edge, and colors ripple along the tunnel walls in waves. Stars flash past between the crystals. Continuous, fast, hypnotic motion with hard geometric edges.'
+      "The camera plunges straight into the bright white wedge at the center of the composition. Inside it is the entire artwork again, smaller and rotated thirty degrees. The camera keeps diving into the center of each copy, accelerating, every layer rotating further and its colors cycling, pink becoming lime becoming electric blue, so the image becomes an endless spiralling recursive zoom of the same geometric composition nested inside itself, faster and faster, with star glints streaming outward from the center. Keep the look of the source artwork throughout: flat, hard-edged, translucent overlapping glass planes in hot pink, lime green, electric blue and white, with small dark four-pointed star glints. Bold graphic style, crisp edges, no lens flares, no blur, no text."
   },
   {
-    name: 'Hyperspace refraction',
+    name: "Origami supernova",
     prompt:
-      'Jump to hyperspace: the starfield stretches into long radiating light streaks rushing toward the camera. The crystal geometry refracts the streaks into prismatic spectral colors, facets rotating and catching light as they fly by. Colors cycle from magenta to cyan to acid green. Fast, energetic, glassy and sharp.'
+      "The whole composition folds inward along its straight edges like origami, panel over panel, collapsing toward the center into a single tight knot of layered glass that glows from inside. It holds for a heartbeat, trembling. Then it detonates outward in a flat graphic burst of hundreds of translucent triangles that unfold in mid-flight into geometric flowers and pinwheels, spinning as they fly, before landing and locking together edge to edge into a completely new composition that fills the frame. Keep the look of the source artwork throughout: flat, hard-edged, translucent overlapping glass planes in hot pink, lime green, electric blue and white, with small dark four-pointed star glints. Bold graphic style, crisp edges, no lens flares, no blur, no text."
   },
   {
-    name: 'Kaleidoscope dive',
+    name: "Synthwave terrain",
     prompt:
-      'An endless dive into a symmetrical crystalline kaleidoscope: mirrored fractal facets rotate and zoom inward continuously, new layers of crystal emerging from the center. Stars sparkle through the translucent glass. Rapid, smooth hue shifting across the whole image. Hard-edged geometric crystal, vivid neon palette.'
+      "The planes tip backward and lie flat, becoming an endless landscape of translucent triangular mountains, lime green and hot pink, stretching to the horizon. Above them rises a huge striped retro sun built from electric blue triangles, and the sky fills with twinkling dark star glints. The camera flies low and fast over the peaks toward the sun, and the mountains ripple up and down beneath it like an audio waveform, their facets flashing brighter on each crest. Retro 1980s album-cover energy. Keep the look of the source artwork throughout: flat, hard-edged, translucent overlapping glass planes in hot pink, lime green, electric blue and white, with small dark four-pointed star glints. Bold graphic style, crisp edges, no lens flares, no blur, no text."
   },
   {
-    name: 'Shatter and reform',
+    name: "Tessellation tide",
     prompt:
-      'The crystal composition shatters into thousands of glittering shards that fly past the camera at speed through a starfield, then reassemble ahead of us into a new crystalline fractal form. Colors shift with every fracture. Sharp translucent facets, bright refracted light, fast dynamic motion.'
+      "A wave sweeps across the image and every triangle flips over one after another like falling dominoes, each one revealing a different color on its back: pink flips to blue, lime flips to magenta, blue flips to white. A second wave starts from the opposite corner, crosses the first, and where they meet the flipping triangles form shimmering interference patterns of color. The star glints pop and sparkle like camera flashes as each wave passes over them. The camera slowly rotates as the tides of color roll through. Keep the look of the source artwork throughout: flat, hard-edged, translucent overlapping glass planes in hot pink, lime green, electric blue and white, with small dark four-pointed star glints. Bold graphic style, crisp edges, no lens flares, no blur, no text."
+  },
+  {
+    name: "Paper-cut portal",
+    prompt:
+      "The artwork separates into deep layers like a paper-cut diorama, each translucent plane floating at a different depth with strong parallax. The camera flies forward through a triangular portal cut into the front layer, then through a smaller portal in the next layer, each layer's cutouts becoming more intricate geometric lace, until the final layer opens into a vast rotating mandala built from the same colored triangles. Keep the look of the source artwork throughout: flat, hard-edged, translucent overlapping glass planes in hot pink, lime green, electric blue and white, with small dark four-pointed star glints. Bold graphic style, crisp edges, no lens flares, no blur, no text."
   }
 ];
 

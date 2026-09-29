@@ -34,6 +34,8 @@ export interface ModelConfig {
   label: string;
   tier: 'iterate' | 'premium';
   notes: string;
+  /** Longest prompt the model's schema accepts, in characters. */
+  maxPromptLength: number;
   /** The input field the source image goes in -- not the same name on every model. */
   imageParam: string;
   /** Offered durations, in seconds. */
@@ -61,6 +63,7 @@ export const MODELS: ModelConfig[] = [
     label: 'LTX-2.3 Fast',
     tier: 'iterate',
     notes: 'Default iteration model. Audio, when on, is described in the main prompt.',
+    maxPromptLength: 5000,
     imageParam: 'image_url',
     durations: [6, 8, 10, 12, 14, 16, 18, 20],
     defaultDuration: 6,
@@ -88,6 +91,7 @@ export const MODELS: ModelConfig[] = [
     tier: 'iterate',
     notes:
       'Output is 16:9. On 2026-09-29 every request failed with downstream_service_error after 6-19s (3 attempts: different sizes, audio on/off, different prompts; fal status all green; not billed).',
+    maxPromptLength: 5000,
     imageParam: 'image_url',
     durations: [6, 8, 10, 12, 14, 16, 18, 20],
     defaultDuration: 6,
@@ -113,6 +117,7 @@ export const MODELS: ModelConfig[] = [
     label: 'Kling v3 Pro',
     tier: 'premium',
     notes: 'Aspect ratio follows the source image. No resolution input.',
+    maxPromptLength: 2500,
     imageParam: 'start_image_url',
     durations: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
     defaultDuration: 5,
@@ -138,6 +143,7 @@ export const MODELS: ModelConfig[] = [
     label: 'Veo 3.1 Fast',
     tier: 'premium',
     notes: 'Aspect ratio auto / 16:9 / 9:16.',
+    maxPromptLength: 20000,
     imageParam: 'image_url',
     durations: [4, 6, 8],
     defaultDuration: 8,
